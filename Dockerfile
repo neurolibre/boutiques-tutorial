@@ -1,5 +1,5 @@
 FROM fedora:latest
 RUN dnf update -y && dnf install singularity -y && \
-    git+https://github.com/glatard/boutiques.git@singularity-fix#subdirectory=tools/python
+    pip install git+https://github.com/glatard/boutiques.git@singularity-fix#subdirectory=tools/python
 RUN (cd notebooks ; singularity pull --name mcin-docker-fsl-latest.simg.tmp docker://index.docker.io/mcin/docker-fsl:latest)
 
