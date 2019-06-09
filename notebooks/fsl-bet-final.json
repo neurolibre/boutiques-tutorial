@@ -8,7 +8,6 @@
     },
     "description": "Automated brain extraction tool for FSL",
     "descriptor-url": "https://github.com/aces/cbrain-plugins-neuro/blob/master/cbrain_task_descriptors/fsl_bet.json",
-    "doi": "10.5072/zenodo.295248",
     "groups": [
         {
             "description": "Specify parameters that alter the default BET functionality",
