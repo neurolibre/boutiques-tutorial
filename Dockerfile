@@ -1,1 +1,1 @@
-FROM boutiques/boutiques-tutorial:2ddd218
+FROM boutiques/boutiques-tutorial:1451076
