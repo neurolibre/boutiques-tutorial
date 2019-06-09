@@ -14,6 +14,6 @@ RUN chown -R boutiques:boutiques /home/boutiques
 USER boutiques
 
 # Notebook stuff 
-RUN (cd /home/boutiques/notebooks ; singularity pull --name mcin-docker-fsl-latest.simg docker://index.docker.io/mcin/docker-fsl:latest)
+#RUN (cd /home/boutiques/notebooks ; singularity pull --name mcin-docker-fsl-latest.simg docker://index.docker.io/mcin/docker-fsl:latest)
 ENTRYPOINT ["/entrypoint"]
 
