@@ -1,5 +1,13 @@
 FROM fedora:latest
+# Install stuff
 RUN dnf update -y && dnf install singularity -y && \
-    pip3 install boutiques
-RUN (cd notebooks ; singularity pull --name mcin-docker-fsl-latest.simg docker://index.docker.io/mcin/docker-fsl:latest)
+    pip3 install boutiques && \
+    pip install --no-cache-dir notebook==5.*
+# Binder-specific stuff
+RUN useradd -d /home/boutiques -u 1000 boutiques
+USER boutiques
+COPY notebooks /home/boutiques
+COPY entrypoint.sh /bin
+RUN (cd /home/boutiques/notebooks ; singularity pull --name mcin-docker-fsl-latest.simg docker://index.docker.io/mcin/docker-fsl:latest)
+ENTRYPOINT /bin/entrypoint.sh
 
