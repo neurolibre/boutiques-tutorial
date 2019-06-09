@@ -1,4 +1,0 @@
-{
-	"infile": "./data/test.nii.gz",
-        "maskfile": "test_brain.nii.gz"
-}
