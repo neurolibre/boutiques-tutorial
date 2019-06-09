@@ -1,1 +1,1 @@
-FROM boutiques/boutiques-tutorial:binder
+FROM boutiques/boutiques-tutorial:2ddd218
