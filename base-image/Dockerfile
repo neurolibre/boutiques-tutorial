@@ -18,7 +18,7 @@ COPY notebooks /home/boutiques/notebooks
 COPY base-image/entrypoint /
 
 # Tampering the cache so that descriptor runs without a container image
-COPY base-image/zenodo-1482743.json base-image/zenodo-3240521.json /home/boutiques/.cache/boutiques
+COPY base-image/zenodo-1482743.json base-image/zenodo-3240521.json /home/boutiques/.cache/boutiques/
 RUN chown -R boutiques:boutiques /home/boutiques
 USER boutiques
 WORKDIR /home/boutiques
