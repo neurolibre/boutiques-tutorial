@@ -4,7 +4,6 @@ FROM mcin/docker-fsl
 RUN yum update -y && \
     yum install -y epel-release && \
     yum update -y && \
-    yum install -y singularity-runtime singularity &&\
     yum install -y python36 python36-setuptools && \
     easy_install-3.6 pip &&\
     pip3 install boutiques && \
@@ -16,10 +15,10 @@ RUN yum update -y && \
 RUN useradd -d /home/boutiques -u 1000 boutiques &&\
     mkdir /home/boutiques/notebooks && mkdir -p /home/boutiques/.cache/boutiques
 COPY notebooks /home/boutiques/notebooks
-COPY Dockerhub/entrypoint /
+COPY base-image/entrypoint /
 
 # Tampering the cache so that descriptor runs without a container image
-COPY Dockerhub/zenodo-1482743.json /home/boutiques/.cache/boutiques
+COPY base-image/zenodo-1482743.json /home/boutiques/.cache/boutiques
 RUN chown -R boutiques:boutiques /home/boutiques
 USER boutiques
 WORKDIR /home/boutiques
