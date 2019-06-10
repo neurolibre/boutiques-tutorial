@@ -2,6 +2,6 @@
 
 # Boutiques tutorial
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/boutiques/tutorial/master?filepath=%2Fnotebooks%2Fboutiques-tutorial.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://binder.conp.cloud/v2/gh/neurolibre/boutiques-tutorial/master?filepath=/notebooks/boutiques-tutorial.ipynb)
 
 Open the [tutorial notebook](https://nbviewer.jupyter.org/github/boutiques/tutorial/blob/master/notebooks/boutiques-tutorial.ipynb) and get started!
