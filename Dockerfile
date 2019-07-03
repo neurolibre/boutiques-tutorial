@@ -1,6 +1,6 @@
 # This container is built in base-image and pushed manually
 # 
-FROM boutiques/boutiques-tutorial:e33d116
+FROM boutiques/boutiques-tutorial:94ba8c7
 
 # Binder stuff
 RUN useradd -d /home/boutiques -u 1000 boutiques &&\
